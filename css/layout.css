@@ -1,0 +1,162 @@
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #111;
+  background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05) 1px, 0, transparent 50px);
+  background-color: #333;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 99;
+  overflow: hidden;
+  top: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+#header h1 {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #ccc,2px 2px 0px #ccc,3px 3px 0px #ccc,4px 4px 0px #ccc,5px 5px 0px #ccc,6px 6px 0px #ccc,7px 7px 0px #ccc,8px 8px 0px #ccc,9px 9px 0px #ccc,10px 10px 0px #ccc,11px 11px 0px #ccc,12px 12px 0px #ccc,13px 13px 0px #ccc,14px 14px 0px #ccc,15px 15px 0px #ccc,16px 16px 0px #ccc,17px 17px 0px #ccc,18px 18px 0px #ccc,19px 19px 0px #ccc,20px 20px 0px #ccc,21px 21px 0px #ccc,22px 22px 0px #ccc,23px 23px 0px #ccc,24px 24px 0px #ccc,25px 25px 0px #ccc,26px 26px 0px #ccc,27px 27px 0px #ccc,28px 28px 0px #ccc,29px 29px 0px #ccc,30px 30px 0px #ccc,31px 31px 0px #ccc,32px 32px 0px #ccc,33px 33px 0px #ccc,34px 34px 0px #ccc,35px 35px 0px #ccc,36px 36px 0px #ccc,37px 37px 0px #ccc,38px 38px 0px #ccc,39px 39px 0px #ccc,40px 40px 0px #ccc,41px 41px 0px #ccc,42px 42px 0px #ccc,43px 43px 0px #ccc,44px 44px 0px #ccc,45px 45px 0px #ccc,46px 46px 0px #ccc,47px 47px 0px #ccc,48px 48px 0px #ccc,49px 49px 0px #ccc,50px 50px 0px #ccc;
+}
+#header h1 strong {
+  font-weight: 700;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 18px;
+}
+.searchBox #txtSearch {
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 100px;
+  width: 800px;
+  height: 60px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+.searchBox #btnSearch {
+  margin-left: 20px;
+  background-color: #111;
+  color: #fff;
+  font-family: "Noto Sans KR";
+  border-radius: 100px;
+  width: 100px;
+  border: none;
+  height: 60px;
+}
+
+#main {
+  min-height: 500px;
+  width: 1200px;
+  margin: 50px auto 0;
+}
+#main .itemList > li {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+#main .itemList > li a .img img {
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+}
+#main .itemList > li a .info {
+  margin-left: 30px;
+  font-size: 14px;
+}
+#main .itemList > li a .info li {
+  margin: 5px 0;
+}
+
+/**
+  * Scaling dots
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes scaling-dots {
+  0%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40%, 60% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scaling-dots {
+  0%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40%, 60% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.loading {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  pointer-events: none;
+}
+
+.scaling-dots {
+  display: grid;
+  height: 10px;
+  grid-gap: 5px;
+  grid-template-columns: repeat(5, 10px);
+}
+
+.scaling-dots div {
+  -webkit-animation: scaling-dots 1s infinite ease backwards;
+  animation: scaling-dots 1s infinite ease backwards;
+  background: #fff;
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+}
+
+.scaling-dots div:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.scaling-dots div:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.scaling-dots div:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.scaling-dots div:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.scaling-dots div:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
